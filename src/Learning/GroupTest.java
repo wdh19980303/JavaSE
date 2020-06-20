@@ -8,5 +8,6 @@ public class GroupTest {
         String stringtest = "test";
         StringBuffer stringBuffer = new StringBuffer(stringtest);
         System.out.println(stringBuffer.reverse());
+        System.out.println("end");
     }
 }
