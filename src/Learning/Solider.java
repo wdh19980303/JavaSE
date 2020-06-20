@@ -29,6 +29,9 @@ public class Solider extends Person {
 
         Single single = Single.getInstance();
         Singleto singleto = Singleto.getInstance();
+        Person person = new Person();
+
+
 
 
 

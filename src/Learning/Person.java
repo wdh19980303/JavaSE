@@ -7,6 +7,12 @@ class Person {
     private String gender;
 
     public Person() {
+        System.out.println("执行构造方法");
+
+    }
+
+    {
+        System.out.println("非静态代码块");
     }
 
     public int getAge() {
