@@ -14,6 +14,7 @@ public class TestObject {
         String stringtext = new String("sexs");
         System.out.println(stringcont == stringtext);
         System.out.println(stringcont.equals(stringtext));
+
     }
 
 }
