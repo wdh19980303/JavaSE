@@ -10,5 +10,6 @@ public class GroupTest {
         System.out.println(stringBuffer.reverse());
         System.out.println("end");
         System.out.println("game");
+        System.out.println("see");
     }
 }

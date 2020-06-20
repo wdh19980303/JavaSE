@@ -1,13 +1,17 @@
 package Learning;
 
 class Person {
-    private int age = 0 ;
+    private int age = 0;
     private String address;
     private String employee;
     private String gender;
 
+    TestPerson tp = new TestPerson();
+
+
+
     public Person() {
-        System.out.println("执行构造方法");
+        this.gender = "man" ;
 
     }
 
