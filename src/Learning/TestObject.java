@@ -15,6 +15,10 @@ public class TestObject {
         System.out.println(stringcont == stringtext);
         System.out.println(stringcont.equals(stringtext));
 
+
+        Inner inner = new Inner();
+
+
     }
 
 }

@@ -11,7 +11,7 @@ public class tests extends Enterprise implements api {
 
     @Override
     public void setCode() {
-        System.out.println("setcode");
+        System.out.println("setCode");
     }
 
 

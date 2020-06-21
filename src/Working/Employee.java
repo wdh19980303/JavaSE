@@ -5,5 +5,6 @@ public abstract class Employee {
     double salary;
     String name;
 
+
     public abstract void work();
 }
