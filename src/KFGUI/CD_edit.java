@@ -18,18 +18,25 @@ public class CD_edit {
 
 class editUI {
     JFrame ControlFrame = new JFrame("CD.edit");
-    GridLayout GL = new GridLayout(5, 2, 100, 20);
+    GridLayout GL = new GridLayout(6, 1, 20, 20);
+
 
     {
-        ControlFrame.setSize(300, 750);
+
+        ControlFrame.setSize(660, 300);
         ControlFrame.setLocationRelativeTo(null);
         ControlFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        ControlFrame.setLayout(new GridLayout(1,2,10,20));
 
-        JPanel ControlPanel = new JPanel(GL);
+
+        JPanel ControlPanelLeft = new JPanel(GL);
+        JPanel ControlPanelRight = new JPanel(GL);
         JButton confirm = new JButton("confirm");
 
         String information = "当前文件";
         Font font = new Font("微软雅黑", Font.PLAIN, 18);
+
+
 
         JLabel MaxMonsters = new JLabel(information, JLabel.CENTER);
         JLabel CohortSize = new JLabel(information, JLabel.CENTER);
@@ -37,13 +44,13 @@ class editUI {
         JLabel SpawnPoll = new JLabel(information, JLabel.CENTER);
         JLabel WaveFakeSize = new JLabel(information, JLabel.CENTER);
 
-       /* JTextField  =new JTextField("se");
-        JTextField field =new JTextField("se");
-        JTextField field =new JTextField("se");
-        JTextField field =new JTextField("se");
-        JTextField field =new JTextField("se");*/
+        JTextField MaxMonstersEdit =new JTextField("se");
+        JTextField CohortSizeEdit =new JTextField("se");
+        JTextField SpawnModEdit =new JTextField("se");
+        JTextField SpawnPollEdit =new JTextField("se");
+        JTextField WaveFakeSizeEdit =new JTextField("se");
 
-
+        //字体设置
         MaxMonsters.setFont(font);
         CohortSize.setFont(font);
         SpawnMod.setFont(font);
@@ -55,17 +62,30 @@ class editUI {
 
         confirm.setFont(font);
 
-        ControlPanel.add(MaxMonsters);
-        ControlPanel.add(CohortSize);
-        ControlPanel.add(SpawnMod);
-        ControlPanel.add(SpawnPoll);
-        ControlPanel.add(WaveFakeSize);
-        //ControlPanel.add(field);
+        //添加的按键
+        ControlPanelLeft.add(MaxMonsters);
+        ControlPanelLeft.add(CohortSize);
+        ControlPanelLeft.add(SpawnMod);
+        ControlPanelLeft.add(SpawnPoll);
+        ControlPanelLeft.add(WaveFakeSize);
+//        ControlPanelLeft.add(new Button("emmm"));
 
-//        ControlPanel.add(confirm);
+        //添加的字段
+        ControlPanelRight.add(MaxMonstersEdit);
+        ControlPanelRight.add(CohortSizeEdit);
+        ControlPanelRight.add(SpawnModEdit);
+        ControlPanelRight.add(SpawnPollEdit);
+        ControlPanelRight.add(WaveFakeSizeEdit);
+        ControlPanelRight.add(confirm);
 
 
-        ControlFrame.setContentPane(ControlPanel);
+
+        ControlFrame.add(ControlPanelLeft);
+        ControlFrame.add(ControlPanelRight);
+//        ControlFrame.add(confirm);
+
+
+
         ControlFrame.setVisible(true);
     }
 }

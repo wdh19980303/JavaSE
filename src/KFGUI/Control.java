@@ -28,6 +28,7 @@ public class Control {
         ControlPanel.add(confirm);
 
 
+        int s;
         ControlFrame.setContentPane(ControlPanel);
         ControlFrame.setVisible(true);
         File d3d11_source = new File("D:\\Steam\\steamapps\\common\\killingfloor2\\Binaries\\Win64\\d3d11.dll");
@@ -36,7 +37,7 @@ public class Control {
             ControlLabel.setText("当前d3d11.dll存在");
         } else if (d3d11_hide.exists()) {
             ControlLabel.setText("当前d3d11_hide.dll存在");
-        }else{
+        } else {
             ControlLabel.setText("当前引用文件不存在");
         }
 
@@ -44,6 +45,7 @@ public class Control {
         confirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 File d3d11_source = new File("D:\\Steam\\steamapps\\common\\killingfloor2\\Binaries\\Win64\\d3d11.dll");
                 File d3d11_hide = new File("D:\\Steam\\steamapps\\common\\killingfloor2\\Binaries\\Win64\\d3d11_hide.dll");
 
@@ -54,10 +56,9 @@ public class Control {
                     d3d11_hide.renameTo(d3d11_source);
                     ControlLabel.setText("当前恢复d3d11.dll使用");
                 }
-
-
             }
         });
+
 
     }
 }
