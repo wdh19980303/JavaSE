@@ -19,7 +19,7 @@ public class OperateStandardInputAndOutput {
         String string = "";
         while (true){
             try {
-                if (!((string = Br.readLine())!=null)) break;
+                if ((string = Br.readLine()) == null) break;
             } catch (IOException e) {
                 e.printStackTrace();
             }

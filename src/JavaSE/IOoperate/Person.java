@@ -1,23 +1,28 @@
-package JavaSE.Learning;
+package JavaSE.IOoperate;
 
-class Person {
+import java.io.Serializable;
+
+class Person implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+
     private int age = 0;
-    private String address;
-    private String employee;
-    private String gender;
+    private String address = "";
+    private String employee = "";
+    private String gender = "";
 
 //    TestPerson tp = new TestPerson();
 
 
 
     public Person() {
-        this.gender = "man" ;
+
 
     }
 
-    {
+    /*{
         System.out.println("非静态代码块");
-    }
+    }*/
 
     public int getAge() {
         return age;
