@@ -15,7 +15,7 @@ class Person  {
 
 
     public Person() {
-        System.out.println("空参构造");
+       /* System.out.println("空参构造");*/
     }
 
     /*{
