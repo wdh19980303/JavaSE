@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.net.http.WebSocket;
 
 public class CD_edit {
 
@@ -31,6 +32,8 @@ class editUI {
 
         JPanel ControlPanelLeft = new JPanel(GL);
         JPanel ControlPanelRight = new JPanel(GL);
+
+        // 按钮
         JButton confirm = new JButton("confirm");
 
         String information = "当前文件";
@@ -62,7 +65,7 @@ class editUI {
 
         confirm.setFont(font);
 
-        //添加的按键
+        //添加的显示
         ControlPanelLeft.add(MaxMonsters);
         ControlPanelLeft.add(CohortSize);
         ControlPanelLeft.add(SpawnMod);
@@ -76,6 +79,8 @@ class editUI {
         ControlPanelRight.add(SpawnModEdit);
         ControlPanelRight.add(SpawnPollEdit);
         ControlPanelRight.add(WaveFakeSizeEdit);
+
+        //添加的按钮
         ControlPanelRight.add(confirm);
 
 
@@ -86,6 +91,24 @@ class editUI {
 
 
 
+
+
+
+
+        class ActionReq implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MaxMonsters.setText("MaxMonsters");
+            }
+        }
+
+        ActionReq actionReq = new ActionReq();
+
+        confirm.addActionListener(actionReq);
+
+
         ControlFrame.setVisible(true);
+
+
     }
 }

@@ -22,17 +22,19 @@ public class Student extends Person implements Move, Study {
         return school;
     }
 
-    public void setMethodS(String school, int score) {
+    public void setField(String school, int score) {
         this.school = school;
         this.score = score;
+        System.out.println(this.score + "\n" + this.school);
     }
 
     private void setScore(int score) {
         this.score = score;
     }
 
-    public void setSchool(String school) {
+    private void setSchool(String school) {
         this.school = school;
+        System.out.println("school = " + this.school);
     }
 
     public Student(int score, String school) {
